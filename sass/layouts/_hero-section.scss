@@ -20,10 +20,14 @@
         letter-spacing: 0.06em;
         text-align: center;
         text-transform: uppercase;
-        max-width: 696px;
+        max-width: 360px;
         margin-top: 0;
         margin-left: auto;
         margin-right: auto;
+
+        @media (min-width: 1200px) {
+            max-width: 696px;
+        }
     }
 
     &__button {

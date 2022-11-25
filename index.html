@@ -21,9 +21,14 @@
         <div class="container">
             <div class="header__container">
                 <nav class="header__menu">
-                    <a href="./index.html" class="header__logo">
+                    <a class="header__logo" href="./index.html" >
                         <span class="header__logo--blue">web</span><span class="header__logo--black">Studio</span>
                     </a>
+                    <button class="header__burger--menu js-open-menu" type="button"> 
+                        <svg class="header__burger--icon" width="24" height="16">
+                            <use href="./images/icons.svg#icon-menu_burger"></use>
+                        </svg>
+                    </button>
                     <ul class="header__nav">
                         <li>
                             <a href="./index.html" class="header__list--link header__list-emphasis">Студія</a>
@@ -37,7 +42,7 @@
                     </ul>
                 </nav>
                 <ul class="header__contacts">
-                    <li>
+                    <li class="header__contact--margin">
                         <a href="mailto:info@devstudio.com" class="header__contact">
                             <span class="header__contact--position">
                                 <svg width="16" height="12">
@@ -50,8 +55,7 @@
                             <span class="header__contact--position">
                                 <svg width="10" height="16">
                                     <use href="./images/icons.svg#icon-smartphone"></use>
-                                </svg>
-                                +38 096 111 11 11</span></a>
+                                </svg>+38 096 111 11 11</span></a>
                     </li>
                 </ul>
             </div>
@@ -123,7 +127,7 @@
                 </div>
             </div>
         </section>
-        <section class="product-section">
+        <!-- <section class="product-section">
             <div class="container">
                 <h2 class="product-section__title">Чим ми займаємося</h2>
                 <ul class="product-section__list">
@@ -394,7 +398,38 @@
                 </li>
             </ul>
         </div>
-    </footer>
+    </footer> -->
+    <div class="mobile-modal js-menu-container">
+        <!-- <div class="container"> -->
+            <nav class="mobile-modal__nav">
+                <button class="mobile-modal__button--close js-close-menu" type="button">
+                    <svg width="18.67" height="18.67" class="mobile-modal__button--icon">
+                        <use href="./images/icons.svg#icon-close_mobile"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-modal__menu">
+                    <li class="mobile-modal__element"><a class="mobile-modal__item" href="./index.html">Студія</a></li>
+                    <li class="mobile-modal__element"><a class="mobile-modal__item" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="mobile-modal__element"><a class="mobile-modal__item" href="#">Контакти</a></li>
+                </ul>
+                <div class="mobile-modal__container">
+                <ul class="mobile-modal__contacts">
+                    <li class="mobile-modal__distance"><a class="mobile-modal__phone" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li class="mobile-modal__distance"><a class="mobile-modal__email" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+                <ul class="mobile-modal__social--list">
+                    <li class="mobile-modal__social--item"> <a class="mobile-modal__social--link" href="#">Instagram</a></li>
+                    <li class="mobile-modal__social--item"><span class="mobile-modal__social--divider"></span></li>
+                    <li class="mobile-modal__social--item"> <a class="mobile-modal__social--link" href="#">Twitter</a></li>
+                    <li class="mobile-modal__social--item"><span class="mobile-modal__social--divider"></span></li>
+                    <li class="mobile-modal__social--item"> <a class="mobile-modal__social--link" href="#">Facebook</a></li>
+                    <li class="mobile-modal__social--item"><span class="mobile-modal__social--divider"></span></li>
+                    <li class="mobile-modal__social--item"> <a class="mobile-modal__social--link" href="#">LinkedIn</a></li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal__button--close" type="button" data-modal-close>
@@ -458,6 +493,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
