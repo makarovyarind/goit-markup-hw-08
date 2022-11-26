@@ -4,7 +4,7 @@
     padding-bottom: 94px;
 
     @media (min-width: 1200px) {
-        display: inline;
+        display: block;
     }
 
     &__title {
@@ -26,7 +26,6 @@
     }
 
     &__img {
-        max-width: 370px;
         max-height: 294px;
     }
 

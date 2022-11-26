@@ -1,16 +1,15 @@
 /*hero section*/
 
 .hero-section {
-    max-width: 1600px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header_mobile.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
     @media (min-width: 768px) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header_table.jpg");
@@ -18,6 +17,9 @@
 
     @media (min-width: 1200px) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-img.jpg");
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
     }
        
 
