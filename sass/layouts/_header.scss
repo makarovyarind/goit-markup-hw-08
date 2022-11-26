@@ -19,11 +19,15 @@
     background-color: #fff;
     list-style-type: none;
 
-    @media (min-width: 780px){
+    @media (min-width: 768px){
         justify-content: center;
-        gap: 93px;
+        gap: 88px;
         flex-grow: 0;
     }
+
+    @media (min-width: 1200px) {
+        gap: 93px;
+        }
 
 }
 
@@ -182,12 +186,15 @@
     gap: 10px;
 
     @media (min-width: 768px) and (max-width: 1200px) {
-    display: inline;
+            display: inline;
+        }
+
 }
 
-    &__contact--margin {
-        margin-bottom: 10px;
+
+    &__contact--item:last-child {
+        @media (min-width: 768px) and (max-width: 1200px) {
+            margin-top: 10px;
+        }
     }
-}
-
 }

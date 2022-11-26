@@ -10,47 +10,85 @@
 
 
     &__list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
 
-    @media (min-width: 480px) {
-        flex-direction: row;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            max-width: 1100px;
+        }
+
+        @media (min-width: 1200px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            justify-content: baseline;
+
+        }
     }
-}
 
-    
+    &__item {
+        margin: 0;
+        padding: 0;
+    }
 
     &__card {
-    width: 270px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: #F5F4FA;
-    margin-bottom: 30px;
-}
+        width: 450px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: #F5F4FA;
+        margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+                width: 354px;
+            }
+
+        @media (min-width: 1200px) {
+            width: 270px;
+        }
+    }
 
     &__title {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin: 0;
-}
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
 
     &__paragraph {
-    color: var(--color-secondary);
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    margin: 10px 0 0 0;
-}
+        width: 450px;
+        color: var(--color-secondary);
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        margin: 10px 0 0 0;
+
+        @media (min-width: 768px) {
+                width: 354px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 270px;
+            }
+    }
 
 }

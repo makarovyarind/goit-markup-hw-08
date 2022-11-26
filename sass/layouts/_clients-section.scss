@@ -1,37 +1,62 @@
 .clients-section {
     background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
-
+    }
 
     &__title {
-        font-size: 36px;
+        font-size: 28px;
         line-height: 1.17;
         font-weight: 700;
         letter-spacing: 0.03em;
         text-align: center;
         margin: 0 auto 0 auto;
+
+        @media (min-width:1200px) {
+        font-size: 36px;
+        line-height: 1.17;
+        }
     }
 
     &__list {
         list-style-type: none;
         display: flex;
+        flex-direction:inherit;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 30px;
-        margin-top: 50px;
+        margin-top: 30px;
         margin-bottom: 0;
         padding: 0;
         transition: border 250ms, fill 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
+
+        @media (min-width:1200px) {
+           
+            margin-top: 50px;
+        }
     }
 
     &__item {
-        width: 170px;
+        width: 210px;
         height: 92px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (min-width: 768px) {
+            width: 226px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 170px;
+            
+        }
     }
 
     &__link {

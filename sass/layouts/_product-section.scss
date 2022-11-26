@@ -1,6 +1,11 @@
 .product-section {
+    display: none;
     background-color: #fff;
     padding-bottom: 94px;
+
+    @media (min-width: 1200px) {
+        display: inline;
+    }
 
     &__title {
         font-size: 36px;

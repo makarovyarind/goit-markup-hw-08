@@ -1,24 +1,54 @@
 .team-section {
     background-color: #F5F4FA;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+    }
 
     &__title {
-        font-size: 36px;
-        line-height: 1.17;
+        font-size: 28px;
+        line-height: 1.18;
         font-weight: 700;
         letter-spacing: 0.03em;
         text-align: center;
         margin: 0 auto 0 auto;
+
+        @media (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.17;
+        }
     }
 
     &__list {
         list-style-type: none;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
         gap: 30px;
-        margin-top: 50px;
+        margin-top: 30px;
         margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
         padding: 0;
+
+        @media (min-width:768px) {
+            flex-direction:row;
+            flex-wrap: row;
+            max-width: 1120px;
+        }
+
+        @media (min-width: 1200px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
     }
 
     &__card {
@@ -29,9 +59,19 @@
             0px 2px 1px rgba(0, 0, 0, 0.2);
     }
 
+    &__picture {
+        width: 450px;
+
+        @media (min-width: 768px) {
+        width: 357px;
+        }
+
+        
+    }
+
     &__img {
-        width: 270px;
-        height: 260px
+        width: 100%;
+        height: auto;
     }
 
     &__element {
