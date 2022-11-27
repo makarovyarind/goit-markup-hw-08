@@ -1,8 +1,13 @@
 .header {
     position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ececec;
+
+    @media (min-width: 768px) {
     padding-top: 26px;
     padding-bottom: 26px;
-    border-bottom: 1px solid #ececec;
+    }
 
     @media (min-width: 1200px) {
     padding-top: 24px;

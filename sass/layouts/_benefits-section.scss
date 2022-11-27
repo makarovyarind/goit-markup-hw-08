@@ -21,26 +21,28 @@
 
         @media (min-width: 768px) {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             justify-content: baseline;
             flex-direction: row;
             flex-wrap: wrap;
-        }
-
-        @media (min-width: 1200px) {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: stretch;
-            justify-content: baseline;
         }
     }
 
     &__item {
         margin: 0;
         padding: 0;
+
+        @media (min-width: 768px) {
+            width: calc((100% - 30px)/2);
+        }
+
+        @media (min-width: 1200px) {
+            width: calc((100% - 90px)/4);
+        }
     }
 
     &__card {
+        height: 120px;
         display: flex;
         align-items: center;
         justify-content: center;

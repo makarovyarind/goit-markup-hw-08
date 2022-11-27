@@ -95,9 +95,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -webkit-box-pack: baseline;
         -ms-flex-pack: baseline;
             justify-content: baseline;
@@ -109,27 +109,22 @@ img {
         flex-wrap: wrap;
   }
 }
-@media (min-width: 1200px) {
-  .benefits-section__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
-  }
-}
 .benefits-section__item {
   margin: 0;
   padding: 0;
 }
+@media (min-width: 768px) {
+  .benefits-section__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1200px) {
+  .benefits-section__item {
+    width: calc((100% - 90px) / 4);
+  }
+}
 .benefits-section__card {
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,7 +275,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 60px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -292,6 +286,7 @@ img {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 60px;
   }
 }
 @media (min-width: 1200px) {
@@ -299,10 +294,20 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     gap: 94px;
+  }
+}
+.footer__item {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .footer__item {
+    width: calc((100% - 94px) / 3);
   }
 }
 .footer__title {
@@ -477,41 +482,49 @@ img {
 }
 @media (min-width: 768px) {
   .footer__form {
-    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 @media (min-width: 1200px) {
   .footer__form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
     gap: 12px;
   }
 }
 .footer__form--input {
   width: 100%;
-  height: auto;
-  background-color: rgba(33, 150, 243, 0);
+  height: 50px;
+  background-color: rgb(47, 48, 58);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 16px;
   color: #fff;
 }
-@media (min-width: 768px) {
-  .footer__form--input {
-    width: 450px;
-  }
+.footer__form--label {
+  width: 100%;
 }
 .footer__form--button {
-  width: 200px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,9 +571,15 @@ img {
 
 .header {
   position: relative;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ececec;
+}
+@media (min-width: 768px) {
+  .header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }
 @media (min-width: 1200px) {
   .header {
@@ -832,14 +851,14 @@ img {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
-  width: 360px;
+  max-width: 360px;
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 1200px) {
   .hero-section__title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
